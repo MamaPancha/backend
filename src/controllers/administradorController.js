@@ -24,9 +24,9 @@ class AdministradorController {
     }
 
     actualizarAdministrador(req, res) {
-        let{id, nombre, apellido, cedula, telefono, email, edad} = req.body;
+        let{id, nombre, apellido, cedula, email, contraseña} = req.body;
         let obj = {
-            nombre, apellido, cedula, telefono, email, edad
+            nombre, apellido, cedula, email, contraseña
         }
 
         administrador.findByIdAndUpdate(id, {
@@ -51,9 +51,5 @@ class AdministradorController {
             }
         });
     }
-
-
-
 }
-
 module.exports = AdministradorController;

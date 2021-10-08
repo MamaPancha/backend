@@ -12,14 +12,11 @@ var administradorSchema = new schema({
     cedula: {
         type: String
     },
-    telefono: {
-        type: String
-    }, 
     email: {
         type: String
     },
-    edad: {
-        type: Number
+    contraseña: {
+        type: String
     }
 }, 
     {collection: 'administradores'}
