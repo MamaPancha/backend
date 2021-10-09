@@ -23,9 +23,9 @@ class ProductoController {
     }
 
     actualizarProducto(req, res) {
-        let{id, nombre, precio, descripcion} = req.body;
+        let{id, nombre, precio, imgUrl, descripcion} = req.body;
         let obj = {
-            nombre, precio, descripcion
+            nombre, precio, imgUrl, descripcion
         }
 
         producto.findByIdAndUpdate(id, {
