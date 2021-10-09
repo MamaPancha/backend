@@ -9,6 +9,9 @@ var productoSchema = new schema({
     precio: {
         type: Number
     },
+    imgUrl: {
+        type: String
+    },
     descripcion: {
         type: String
     }
