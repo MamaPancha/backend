@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const schema = mongoose.Schema;
 
 var administradorSchema = new schema({
@@ -15,11 +14,20 @@ var administradorSchema = new schema({
     email: {
         type: String
     },
-    contraseña: {
+    contrasena: {
         type: String
     }
 }, 
     {collection: 'administradores'}
 );
+
+//eliminar key password
+//administradorSchema.methods.toJSON = function(){
+//  let user = this;
+//  let userObject = user.userObject();
+//    delete userObject.contrasena;
+//    
+//    return userObject;
+//}
 
 module.exports = mongoose.model("Administrador", administradorSchema);

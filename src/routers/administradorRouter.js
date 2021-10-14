@@ -1,6 +1,7 @@
 const express = require('express');
 const AdministradorController = require('../controllers/administradorController');
 
+
 class AdministradorRouter {
     constructor() {
         this.router = express.Router();
@@ -13,6 +14,7 @@ class AdministradorRouter {
         this.router.get('/administrador', administradorController.obtenerAdministradores);
         this.router.put('/administrador', administradorController.actualizarAdministrador);
         this.router.delete('/administrador', administradorController.eliminarAdministrador);
+        this.router.post('/administrador', administradorController.login);
     }
 }
 

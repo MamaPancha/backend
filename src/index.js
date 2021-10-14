@@ -2,6 +2,7 @@ const express = require('express');
 const DbConnection = require('./database/dbConnection');
 const ProductoRouter = require('./routers/productoRouter');
 const AdministradorRouter = require('./routers/administradorRouter');
+const cors = require('cors')
 
 class Server {
     constructor() {
@@ -19,6 +20,8 @@ class Server {
         this.app.set('port', process.env.PORT || 3000);
         //Indicar que se manejarán solicitudes en formato Json
         this.app.use(express.json());
+        //indicar conexiones de origen cruzado
+        this.app.use(cors());
         // Ruta raíz
         const router = express.Router();
         router.get('/', (req, res)=> {

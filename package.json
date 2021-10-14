@@ -12,9 +12,11 @@
     "MongoDB",
     "Express"
   ],
-  "author": "Jessica Ospina",
+  "author": "Jessica Ospina, Jessica Aza, Lucía Castellanos, Fabián Díaz",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mime-types": "^2.1.33",
     "mongoose": "^6.0.8",
